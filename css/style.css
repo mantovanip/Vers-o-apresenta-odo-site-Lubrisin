@@ -188,7 +188,7 @@ header .container {
 }
 
 .logo img {
-    height: 75px;
+    height: 100px;
     width: auto;
     max-width: 260px;
     object-fit: contain;
