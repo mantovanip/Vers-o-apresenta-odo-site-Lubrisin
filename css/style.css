@@ -339,7 +339,7 @@ nav a:hover::after {
 ==================================================*/
 
 .sobre {
-    padding: 100px 0;
+    padding: 150px 0;
     background: var(--white);
 }
 
@@ -357,8 +357,8 @@ nav a:hover::after {
 }
 
 .sobre-imagem img {
-    width: 100%;
-    height: 100%;
+    width: 150%;
+    height: 150%;
     object-fit: cover;
     transition: transform 0.5s ease;
 }
@@ -477,7 +477,6 @@ nav a:hover::after {
 /*==================================================
 7. MARCAS
 ==================================================*/
-
 .brands {
     padding: 80px 0;
     background: var(--white);
@@ -488,21 +487,24 @@ nav a:hover::after {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 40px;
+    gap: 50px;
+    /* Aumentei um pouco o espaço entre as logos */
 }
 
 .brands-slider img {
-    max-height: 50px;
+    max-height: 120px;
+    /* 👈 AUMENTADO de 50px para 80px (ajuste como preferir) */
     width: auto;
+    object-fit: contain;
     filter: grayscale(100%);
-    opacity: 0.6;
+    opacity: 0.7;
     transition: var(--transition);
 }
 
 .brands-slider img:hover {
     filter: grayscale(0%);
     opacity: 1;
-    transform: scale(1.1);
+    transform: scale(1.08);
 }
 
 /*==================================================
