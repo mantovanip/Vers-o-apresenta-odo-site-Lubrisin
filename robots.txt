@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://lubrisin.com.br/sitemap.xml
