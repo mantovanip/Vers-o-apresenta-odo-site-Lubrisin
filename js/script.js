@@ -159,7 +159,31 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     // =========================================
-    // 6. ATUALIZAÇÃO DO ANO NO FOOTER
+    // 6. PARALLAX SUTIL NO HERO
+    // =========================================
+    const heroLogo = document.querySelector(".hero-logo-bg");
+
+    if (heroLogo && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        let ticking = false;
+
+        const updateHeroParallax = () => {
+            const offset = Math.min(window.scrollY * 0.16, 90);
+            heroLogo.style.transform = `translate3d(0, ${offset}px, 0) scale(1.08)`;
+            ticking = false;
+        };
+
+        window.addEventListener("scroll", () => {
+            if (!ticking) {
+                window.requestAnimationFrame(updateHeroParallax);
+                ticking = true;
+            }
+        }, { passive: true });
+
+        updateHeroParallax();
+    }
+
+    // =========================================
+    // 7. ATUALIZAÇÃO DO ANO NO FOOTER
     // =========================================
     const yearSpan = document.getElementById("year");
     if (yearSpan) {
