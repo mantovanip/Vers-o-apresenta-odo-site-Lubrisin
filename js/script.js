@@ -107,7 +107,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener("click", function (e) {
             const href = this.getAttribute("href");
-            
+
             // Ignora se o href for apenas "#"
             if (href === "#") return;
 
