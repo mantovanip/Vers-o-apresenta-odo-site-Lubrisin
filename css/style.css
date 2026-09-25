@@ -575,6 +575,15 @@ nav a:hover::after {
     font-size: 1.05rem;
 }
 
+.historia-imagem img {
+    width: 100%;
+    max-height: 420px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: var(--shadow-md);
+    display: block;
+}
+
 .timeline {
     border-left: 3px solid var(--primary);
     padding-left: 30px;
