@@ -1124,3 +1124,25 @@ footer {
 @media (max-width: 600px) {
     .mapa-card { max-width: 100%; height: 170px; }
 }
+
+
+/* QUEM SOMOS — IMAGEM COMO BACKGROUND */
+.sobre-imagem {
+    min-height: 520px;
+    background-image: url("../assets/img/empresa1.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+@media (max-width: 992px) {
+    .sobre-imagem {
+        min-height: 380px;
+    }
+}
+
+@media (max-width: 480px) {
+    .sobre-imagem {
+        min-height: 280px;
+    }
+}
