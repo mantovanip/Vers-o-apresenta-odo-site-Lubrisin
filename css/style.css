@@ -937,3 +937,127 @@ footer {
         height: 42px;
     }
 }
+
+/* ==================================================
+   AJUSTES MANTOVANI SYS — HERO / RESPONSIVIDADE
+   ================================================== */
+
+.hero {
+    min-height: 100svh;
+    height: 100svh;
+    padding-top: 100px;
+    isolation: isolate;
+}
+
+.hero-logo-bg {
+    position: absolute;
+    inset: -8%;
+    z-index: -2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: #050505;
+    transform: translate3d(0, 0, 0) scale(1.08);
+    will-change: transform;
+}
+
+.hero-logo-bg img {
+    width: min(72vw, 900px);
+    height: auto;
+    max-width: none;
+    object-fit: contain;
+    filter: grayscale(100%) brightness(0.75);
+    opacity: 0.34;
+    user-select: none;
+    pointer-events: none;
+}
+
+.hero .overlay {
+    z-index: -1;
+    background:
+        radial-gradient(circle at 72% 45%, rgba(0, 105, 217, 0.16), transparent 42%),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.94) 0%, rgba(0, 0, 0, 0.72) 58%, rgba(0, 0, 0, 0.58) 100%);
+}
+
+.hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content {
+    padding-left: 0 !important;
+    max-width: 800px;
+}
+
+.hero-content span {
+    font-size: 0.85rem;
+    letter-spacing: 4px;
+}
+
+.mantovani-credit {
+    margin-top: 4px !important;
+    font-size: 0.78rem !important;
+    color: #666 !important;
+}
+
+.mantovani-credit a {
+    color: #bdbdbd;
+    font-weight: 600;
+    transition: color 0.25s ease;
+}
+
+.mantovani-credit a:hover {
+    color: var(--secondary);
+}
+
+@media (max-width: 992px) {
+    .hero {
+        min-height: 100svh;
+        height: 100svh;
+        padding-top: 70px;
+        padding-bottom: 0;
+    }
+
+    .hero-logo-bg {
+        inset: -15%;
+    }
+
+    .hero-logo-bg img {
+        width: min(105vw, 700px);
+        opacity: 0.24;
+    }
+
+    .hero-content {
+        padding: 20px 0 !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        min-height: 100svh;
+        height: 100svh;
+        padding-top: 70px;
+        padding-bottom: 20px;
+    }
+
+    .hero-logo-bg {
+        inset: -20%;
+    }
+
+    .hero-logo-bg img {
+        width: 145vw;
+        opacity: 0.22;
+    }
+
+    .hero-content {
+        max-width: 100%;
+        padding: 15px 0 !important;
+    }
+
+    .hero-content span {
+        margin-bottom: 10px;
+        font-size: 0.72rem;
+        letter-spacing: 3px;
+    }
+}
